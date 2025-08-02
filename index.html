@@ -2,17 +2,17 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Wormhole (虫洞) 协议</title>
   <style>
-    /* 页面样式清零，嵌入式展示 PDF 占满全屏 */
     html, body {
       margin: 0;
       padding: 0;
+      width: 100%;
       height: 100%;
       overflow: hidden;
     }
-    embed, iframe {
+    iframe {
       border: none;
       width: 100%;
       height: 100%;
@@ -20,10 +20,7 @@
   </style>
 </head>
 <body>
-  <!-- 直接嵌入 PDF，浏览器会自动渲染 -->
-  <embed src="Wormhole.pdf" type="application/pdf" />
-  <!-- 如需兼容性更好，可改用 iframe：
-  <iframe src="Wormhole.pdf"></iframe>
-  -->
+  <!-- 用 iframe 嵌入 PDF，并隐藏底部工具栏 -->
+  <iframe src="Wormhole.pdf#toolbar=0"></iframe>
 </body>
 </html>
